@@ -1,0 +1,6 @@
+@import "tailwindcss";
+:root{
+    --brandColor: #60DBFB;
+    --textColor: #ffffff;
+    --backgroundColor: #2A2D3A;
+}
