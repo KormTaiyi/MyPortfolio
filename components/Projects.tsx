@@ -12,7 +12,7 @@ export function Projects() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative overflow-hidden rounded-xl bg-card border border-border hover-glow"
+              className="group relative overflow-hidden rounded-xl bg-card border-2 border-gray-500 hover-glow"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -34,7 +34,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4 pt-6 border-t border-border ">
+                <div className="flex gap-4 pt-6 border-t border-gray-500 ">
                   <a
                     href={project.link}
                     className="flex items-center gap-2 text-primary hover:underline hover:text-red-500 transition-colors"

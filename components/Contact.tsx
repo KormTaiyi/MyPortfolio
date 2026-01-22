@@ -58,7 +58,7 @@ export function Contact() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-foreground/50 text-sm">
-            © {2026} {profile.name}. Designed & built with ❤️ using Next.js, React, and Tailwind CSS.
+            © {2026} {profile.name}. Designed & built with ❤️ using Next.js and Tailwind CSS.
           </p>
         </div>
       </div>

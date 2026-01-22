@@ -14,7 +14,7 @@ export function About() {
             style={{ animationDelay: "0.1s" }}
           >
             <div className="relative flex justify-center md:justify-start">
-              <div className="relative w-64 h-64 md:w-72 md:h-72 group">
+              <div className="relative w-64 h-72 md:w-72 md:h-80 group">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/50 via-primary/30 to-primary/10 blur-xl opacity-60 group-hover:opacity-80"></div>
 
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 ">

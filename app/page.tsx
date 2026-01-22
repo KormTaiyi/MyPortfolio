@@ -28,8 +28,8 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navigation activeSection={activeSection} onSectionChange={scrollToSection} />
       <Hero onScroll={scrollToSection} />
-      <About />
       <Skills />
+      <About />
       <Projects />
       <Contact />
     </div>

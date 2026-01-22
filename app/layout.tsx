@@ -10,7 +10,7 @@ const _sora = Sora({ subsets: ["latin"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
   title: 'Korm Taiyi - Portfolio',
-  description: 'Web Developer Portfolio - React, Next.js, TypeScript & Tailwind CSS',
+  description: 'Full-stack developer specializing in building high-performance e-learning platforms.',
   icons: {
     icon: [
       {
