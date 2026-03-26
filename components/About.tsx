@@ -4,12 +4,6 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { profile } from "@/lib/data/profile";
 
-const highlights = [
-  "Responsive interfaces that work smoothly across devices",
-  "Team-focused workflow with strong communication",
-  "Continuous learning and fast adaptation to new tools",
-];
-
 export function About() {
   return (
     <section id="about" className="section-shell">
@@ -36,10 +30,6 @@ export function About() {
                   priority
                 />
               </div>
-
-              <div className="relative mt-4 rounded-xl border border-white/10 bg-white/3 p-4 text-sm text-foreground/80">
-                {profile.title}
-              </div>
             </div>
           </div>
 
@@ -51,17 +41,6 @@ export function About() {
             <p className="text-base leading-relaxed text-foreground/76 sm:text-lg">
               {profile.additionalBio}
             </p>
-
-            <div className="glass-panel space-y-3 p-6">
-              {highlights.map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <p className="text-sm text-foreground/82 sm:text-base">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

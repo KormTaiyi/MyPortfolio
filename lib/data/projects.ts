@@ -13,13 +13,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'e-shop',
-    description: 'Full-stack e-commerce solution with real-time inventory management.',
-    technologies: ['Next.js', 'TypeScript'],
-    previewImage: '/projects/e-shop-hero.png',
-    previewAlt: 'E-shop hero section preview',
-    status: 'in-progress',
-    link: '#',
-    github: '#',
+    title: "Fake Shop",
+    description:
+      "An e-commerce web app built with Next.js and TypeScript that uses the Fake Store API to fetch products, categories, and product details in real time.",
+    technologies: ["Next.js", "TypeScript"],
+    previewImage: "/images/fake-shop.png",
+    previewAlt: "Fake Shop hero section preview",
+    status: "completed",
+    link: "https://fake-shop-ivory.vercel.app/",
+    github: "https://github.com/KormTaiyi/fake-shop",
   },
 ];
