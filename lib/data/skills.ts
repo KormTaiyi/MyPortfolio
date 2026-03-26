@@ -13,7 +13,6 @@ export const skills: SkillGroup[] = [
       "ReactJs",
       "NextJs",
       "Flutter",
-      "React Native",
     ],
   },
   {

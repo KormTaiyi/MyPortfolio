@@ -3,6 +3,9 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
+  previewImage: string;
+  previewAlt: string;
+  status?: "completed" | "in-progress";
   link: string;
   github: string;
 }
@@ -10,17 +13,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with real-time inventory management and payment integration.',
-    technologies: ['Next.js', 'TypeScript', 'Stripe', 'PostgreSQL'],
-    link: '#',
-    github: '#',
-  },
-  {
-    id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management tool with real-time updates and team collaboration features.',
-    technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind'],
+    title: 'e-shop',
+    description: 'Full-stack e-commerce solution with real-time inventory management.',
+    technologies: ['Next.js', 'TypeScript'],
+    previewImage: '/projects/e-shop-hero.png',
+    previewAlt: 'E-shop hero section preview',
+    status: 'in-progress',
     link: '#',
     github: '#',
   },

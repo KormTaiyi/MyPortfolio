@@ -1,46 +1,67 @@
 "use client";
 
 import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
 import { profile } from "@/lib/data/profile";
+
+const highlights = [
+  "Responsive interfaces that work smoothly across devices",
+  "Team-focused workflow with strong communication",
+  "Continuous learning and fast adaptation to new tools",
+];
 
 export function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">About Me</h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div
-            className="animate-slideInLeft"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <div className="relative flex justify-center md:justify-start">
-              <div className="relative w-64 h-72 md:w-72 md:h-80 group">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/50 via-primary/30 to-primary/10 blur-xl opacity-60 group-hover:opacity-80"></div>
+    <section id="about" className="section-shell">
+      <div className="section-wrap">
+        <div className="mb-14">
+          <h2 className="section-title">About Me</h2>
+          <p className="section-subtitle">
+            I combine product thinking with practical engineering so ideas can
+            move from concept to a polished user experience.
+          </p>
+        </div>
 
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 ">
-                  <Image
-                    src="/my_pic.jpg"
-                    alt="Profile picture"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
+        <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="animate-slideInLeft">
+            <div className="glass-panel group relative mx-auto w-full max-w-[20rem] overflow-hidden p-4">
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/16 via-transparent to-accent/16 opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+
+              <div className="relative h-96 w-full overflow-hidden rounded-2xl border border-white/12">
+                <Image
+                  src="/my_pic.jpg"
+                  alt="Profile picture"
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  priority
+                />
+              </div>
+
+              <div className="relative mt-4 rounded-xl border border-white/10 bg-white/3 p-4 text-sm text-foreground/80">
+                {profile.title}
               </div>
             </div>
           </div>
 
-          <div
-            className="animate-slideInRight"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <p className="text-foreground/80 text-lg leading-relaxed">
+          <div className="animate-slideInRight space-y-6">
+            <p className="text-base leading-relaxed text-foreground/82 sm:text-lg">
               {profile.bio}
             </p>
-            <br />
-            <p className="text-foreground/80 text-lg leading-relaxed">
+
+            <p className="text-base leading-relaxed text-foreground/76 sm:text-lg">
               {profile.additionalBio}
             </p>
+
+            <div className="glass-panel space-y-3 p-6">
+              {highlights.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <p className="text-sm text-foreground/82 sm:text-base">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -4,29 +4,42 @@ import { skills } from "@/lib/data/skills";
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">Skills</h2>
-        <div className="grid md:grid-cols-2 gap-8 animate-fadeInUp">
-          {skills.map((skillGroup) => (
-            <div
+    <section id="skills" className="section-shell">
+      <div className="section-wrap">
+        <div className="mb-14 text-center">
+          <h2 className="section-title">Skills</h2>
+          <p className="mx-auto section-subtitle">
+            A practical toolbox for building, shipping, and maintaining modern
+            web products.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {skills.map((skillGroup, index) => (
+            <article
               key={skillGroup.category}
-              className="h-full rounded-2xl bg-card border-2 border-gray-500 p-4 hover-glow"
+              className="glass-panel hover-glow relative overflow-hidden p-6"
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
-              <h3 className="text-lg font-semibold mb-4 text-primary">
-                {skillGroup.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/60 to-transparent" />
+
+              <div className="mb-5 flex items-center justify-between">
+                <h3 className="text-xl font-semibold text-foreground">
+                  {skillGroup.category}
+                </h3>
+                <span className="rounded-full border border-white/12 bg-white/3 px-3 py-1 text-xs text-foreground/65">
+                  {skillGroup.items.length} tools
+                </span>
+              </div>
+
+              <div className="flex flex-wrap gap-2.5">
                 {skillGroup.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 bg-primary/10 text-primary border border-primary/30 rounded-full text-sm font-medium cursor-default"
-                  >
+                  <span key={skill} className="chip">
                     {skill}
                   </span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
